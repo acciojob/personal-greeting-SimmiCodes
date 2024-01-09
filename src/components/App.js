@@ -8,10 +8,10 @@ const App = () => {
   return (
     <div>
       <P>Enter your name: </P>
-      <input type="text" onChange={(event)=>setInput(event.target.value)}></input>
+      <input type="text" onChange={(event)=>setInput(event.target.value)}/>
 
 
-      {input ? <p>Hello {input}!</p>:""}  
+      {input ? <p>Hello {input}!</p> : ""}  
     </div>
   );
 };
