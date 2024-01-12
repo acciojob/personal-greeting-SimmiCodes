@@ -13,7 +13,7 @@ const handleClick = () => {
   return (
     <div>
       <p>Enter your name: </p>
-      <input type="text" onChange={(event) => setInput(event.target.value)} />
+      <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
    
       {name ? <p>Hello {name}!</p> : ""}  
     </div>
