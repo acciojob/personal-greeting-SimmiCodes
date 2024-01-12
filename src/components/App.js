@@ -1,3 +1,7 @@
+import React, { useState } from "react";
+import './../styles/App.css';
+
+
 const App = () => {
   const [input, setInput] = useState("");
   const [name, setName] = useState("");
