@@ -1,23 +1,19 @@
 import React, { useState } from "react";
-import './../styles/App.css';
 
-
-const handleClick = () => {
-  const [input, setInput] = useState("");
+const Greeting = () => {
   const [name, setName] = useState("");
 
-  const handleClick = () => {
-    setName(input);
+  const handleChange = (event) => {
+    setName(event.target.value);
   };
 
   return (
     <div>
-      <p>Enter your name: </p>
-      <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-   
-      {name ? <p>Hello {name}!</p> : ""}  
+      <div htmlFor="nameInput">Enter your name:</div>
+      <input type="text" id="nameInput" value={name} onChange={handleChange} placeholder="Your Name" />
+      {name && <p>Hello {name}!</p>}
     </div>
   );
 };
 
-export default handleClick;
+export default Greeting;
