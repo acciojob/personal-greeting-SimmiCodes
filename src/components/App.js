@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import './../styles/App.css';
 
-const Greeting = () => {
+const handleClick = () => {
   const [name, setName] = useState("");
 
   const handleChange = (event) => {
@@ -9,11 +10,11 @@ const Greeting = () => {
 
   return (
     <div>
-      <div htmlFor="nameInput">Enter your name:</div>
+      <p htmlFor="nameInput">Enter your name:</p>
       <input type="text" id="nameInput" value={name} onChange={handleChange} placeholder="Your Name" />
       {name && <p>Hello {name}!</p>}
     </div>
   );
 };
 
-export default Greeting;
+export default handleClick;
